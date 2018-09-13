@@ -77,7 +77,7 @@ require 'pages/data/Donnees.inc.php';
           foreach($cocktail['index'] as $index){
             $titre = $conn->real_escape_string($cocktail['titre']);
             $ingredients = $conn->real_escape_string($index);
-            $sql = "INSERT INTO Cocktail (titre, recette , ingredients, preparation) VALUES ('" .utf8_encode($titre) . "','". $recette."','". $ingredients."','".$preparation . "')";
+            $sql = "INSERT INTO Cocktail (titre, recette , ingredients, preparation) VALUES ('" .$titre . "','". $recette."','". $ingredients."','".$preparation . "')";
             if (!($conn->query($sql) === TRUE)) {
               //ERREUR INSERTION DANS LA BDD
               echo "Error: " . $sql . "<br>" . $conn->error;
