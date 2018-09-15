@@ -6,10 +6,37 @@
 <body style="width:70%;margin:auto;">
 
 <?php
+/*
+
+FONCTIONS POUR LA HIERARCHIE
+
+*/
+function test2($array, $value){
+    if(!empty($array[$value]["sous-categorie"])){ // si la ss-categorie n'est pas vide
+      echo '<li>'.$value .'</li>';
+      echo '<ul>';
+    foreach ($array[$value]['sous-categorie'] as $key => $value) {
+      test2($array,$value);
+    }
+    echo '</ul>';
+  }
+  else{
+    echo '<li><a href="#">'.$value .'</a></li>';
+  }
+}
+function test($array,$root){
+      echo '<ul>';
+      foreach ($array[$root]['sous-categorie'] as $key => $value) { // elt de la ss-categorie
+        test2($array,$value);
+      }
+      echo '</ul>';
+
+}
+
 require 'pages/data/Donnees.inc.php';
   $servername = "localhost";
   $username = "root";
-  $password = "";
+  $password = "root";
   // Create connection
   $conn = new mysqli($servername, $username, $password);
   // Check connection
@@ -95,18 +122,9 @@ require 'pages/data/Donnees.inc.php';
   }
   else{
 // CODE HERE
-echo '<ul>';
-foreach ($Hierarchie as $types) {
-  if(is_array($types['super-categorie'])){
-    echo '<ul>';
-    foreach ($types['super-categorie'] as $types2) {
-      // code...
-      echo '<li>'.$types2."</li>";
-    }
-    echo '</ul>';
-  }
-}
-echo'</ul>';
+
+
+test($Hierarchie,'Aliment');
 ?>
 
 
