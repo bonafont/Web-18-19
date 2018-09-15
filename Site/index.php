@@ -1,9 +1,9 @@
 <html>
 <head>
-  <link rel="stylesheet" text="text/css" href="index.css">
+  <link rel="stylesheet" text="text/css" href="style.css">
 <title>Test</title>
 </head>
-<body style="width:70%;margin:auto;">
+<body>
 
 <?php
 /*
@@ -11,12 +11,13 @@
 FONCTIONS POUR LA HIERARCHIE
 
 */
-function test2($array, $value){
+function test2($array, $value,$i){
     if(!empty($array[$value]["sous-categorie"])){ // si la ss-categorie n'est pas vide
       echo '<li>'.$value .'</li>';
-      echo '<ul>';
+      echo '<ul class="sub_menu_'.$i.'">';
+      $i++;
     foreach ($array[$value]['sous-categorie'] as $key => $value) {
-      test2($array,$value);
+      test2($array,$value,$i);
     }
     echo '</ul>';
   }
@@ -25,9 +26,10 @@ function test2($array, $value){
   }
 }
 function test($array,$root){
-      echo '<ul>';
+      echo '<ul class="main_menu">';
+      $i = 0;
       foreach ($array[$root]['sous-categorie'] as $key => $value) { // elt de la ss-categorie
-        test2($array,$value);
+        test2($array,$value,$i);
       }
       echo '</ul>';
 
@@ -122,7 +124,6 @@ require 'pages/data/Donnees.inc.php';
   }
   else{
 // CODE HERE
-
 
 test($Hierarchie,'Aliment');
 ?>

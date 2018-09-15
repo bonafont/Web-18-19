@@ -1,0 +1,25 @@
+ ul > ul {
+  display: none;
+  transition: 0s 5s;
+}
+ li:hover + ul{
+  display: block;
+  position: relative;
+  left: auto;
+  transition: 0s 5s;
+}
+ul:hover{
+  display: block;
+  transition: 0s 5s;
+}
+ul li{
+  list-style-type: none;
+}
+li{
+  padding: 5px;
+}
+.main_menu{
+  list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+}
