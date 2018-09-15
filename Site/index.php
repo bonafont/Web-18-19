@@ -124,7 +124,6 @@ require 'pages/data/Donnees.inc.php';
   }
   else{
 // CODE HERE
-
 test($Hierarchie,'Aliment');
 ?>
 

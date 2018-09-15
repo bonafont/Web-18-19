@@ -1,25 +1,44 @@
+body{
+  top:0px;
+  margin: 0px;
+  padding: 0px;
+}
+
  ul > ul {
   display: none;
-  transition: 0s 5s;
+  top:0px;
+  left: 200px;
+  position: absolute;
+  height: 350px;
+
 }
  li:hover + ul{
-  display: block;
-  position: relative;
-  left: auto;
-  transition: 0s 5s;
+  display: inline-block;
+  transition: 0.3s ease;
+
 }
 ul:hover{
-  display: block;
+  display: inline-block;
   transition: 0s 5s;
 }
-ul li{
-  list-style-type: none;
-}
+
 li{
-  padding: 5px;
+  list-style-type: none;
+  padding: 10;
 }
 .main_menu{
   list-style-type: none;
-   padding: 0;
-   overflow: hidden;
+  padding: 0;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+}
+ul{
+  padding: 0px;
+  display: inline-block;
+  width:auto;
+  height: 500px;
+  position: relative;
+  width: 200px;
+  height: 350px;
 }
