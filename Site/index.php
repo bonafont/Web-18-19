@@ -13,7 +13,7 @@ FONCTIONS POUR LA HIERARCHIE
 */
 function test2($array, $value,$i){
     if(!empty($array[$value]["sous-categorie"])){ // si la ss-categorie n'est pas vide
-      echo '<li>'.$value .'</li>';
+      echo '<li tabindex="1">'.$value .'</li>';
       echo '<ul class="sub_menu_'.$i.'">';
       $i++;
     foreach ($array[$value]['sous-categorie'] as $key => $value) {
