@@ -3,25 +3,24 @@ body{
   margin: 0px;
   padding: 0px;
 }
-
  ul > ul {
-  display: none;
+  visibility: hidden;
   top:0px;
   left: 200px;
   position: absolute;
   height: 350px;
-
+  transform: translateX(-50px);
+  transition:opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
 }
- li:hover + ul{
-  display: inline-block;
-  transition: 0.3s ease;
-
+ li:focus + ul{
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
-ul:hover{
-  display: inline-block;
-  transition: 0s 5s;
+ul:focus:within{
+  visibility: visible;
 }
-
 li{
   list-style-type: none;
   padding: 10;
