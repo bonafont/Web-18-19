@@ -1,11 +1,17 @@
 nav {    
   display: block;
   text-align: center;
+  border-radius: 30px;
+  margin-top: 50px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif
 }
 nav ul {
   margin: 0;
   padding:0;
   list-style: none;
+  box-shadow: 4px 7px 11px grey;
+  border-radius: 10px;
 }
 .nav a {
   display:block; 
@@ -43,6 +49,10 @@ nav ul {
 .nav li {
   position: relative;
 }
+.nav li span, .nav li a{
+  padding-top: 10px;
+  padding-bottom:10px;
+}
 .nav > li { 
   float: left; 
   border-bottom: 4px #aaa solid; 
@@ -74,7 +84,6 @@ nav ul {
 .nav li li a { 
   margin-top: 1px;
 }
-
  .nav ul {
   position: absolute;
   white-space: nowrap;
@@ -82,13 +91,32 @@ nav ul {
   z-index: 1;
   left: -99999px;
 }
+.nav > li > ul{
+  opacity: 0;
+  transition: opacity .25s ease;
+}
 .nav > li:hover > ul {
-  transition: ease;
   left: auto;
   margin-top: 5px;
+  margin-left: -2px;
   min-width: 100%;
+  opacity: 1;
+}
+.nav li li a{
+  color: white;
+  background-color: black;
+  transition: .25s ease;
+}
+.nav li li a:hover{
+  background-color: white;
+  color: black;
+}
+.nav > li li > ul{
+opacity: 0;
 }
 .nav > li li:hover > ul { 
+  transition: opacity .25s ease;
+  opacity: 1;
   left: 100%;
   margin-left: 1px;
   top: -1px;
