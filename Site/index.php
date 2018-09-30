@@ -123,9 +123,13 @@ require 'pages/data/Donnees.inc.php';
       }
   }
   else{
-// CODE HERE
-test($Hierarchie,'Aliment');
-?>
+    // CODE HERE
+    ?>
+<div class="banner">
+  <img class="logo" src="images/KACEDOCKTAILS_LOGO.png" alt="logo">
+  <span class="moto">KACEDOCKTAILS</span>
+</div>
+<?php test($Hierarchie,'Aliment');?>
 
 
 <?php

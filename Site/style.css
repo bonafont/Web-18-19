@@ -1,8 +1,16 @@
+body{
+  margin: 0px;
+}
+
+/* 
+BEGIN
+NAVIGATION BAR
+*/
+
 nav {    
   display: block;
   text-align: center;
   border-radius: 30px;
-  margin-top: 50px;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif
 }
@@ -120,4 +128,32 @@ opacity: 0;
   left: 100%;
   margin-left: 1px;
   top: -1px;
+}
+/* 
+END
+NAVIGATION BAR
+*/
+
+.banner{
+  position: relative;
+  top:0px;
+  width:100%;
+  background-color:black;
+  height: 300px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.logo{
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+}
+.moto{
+  color:white;
+  font-size: 50px;
+  margin-left: 20px;
+}
+.center{
+  text-align: center;
 }
