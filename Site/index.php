@@ -134,7 +134,12 @@ require 'pages/data/Donnees.inc.php';
 
 <div class="penis">
 <?php
-$sql = "SELECT * FROM Cocktail WHERE ingredients = '" . $conn->real_escape_string($_GET['ingredients']) ."'";
+if(empty($_GET['ingredients'])){
+  $sql = "SELECT * FROM Cocktail GROUP BY titre";
+}
+else{
+  $sql = "SELECT * FROM Cocktail WHERE ingredients = '" . $conn->real_escape_string($_GET['ingredients']) ."'";
+}
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
@@ -155,12 +160,13 @@ if ($result->num_rows > 0) {
   ?>
   </span>
   <span class="preparation"><?php echo $row['preparation']?></span>
-</div>
+</div>  display: block;
+  margin: auto;
 </div>
       <?php
     }
 } else {
-    echo "0 results";
+    echo "Aucun Cocktail ne contient de " . $_GET['ingredients'];
 }
 
 
