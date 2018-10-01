@@ -22,7 +22,7 @@ function test2($array, $value,$i){
     echo '</ul></li>';
   }
   else{
-    echo '<li><a href="#">'.$value .'</a></li>';
+    echo '<li><a href="index.php?ingredients='. $value .'">'.$value .'</a></li>';
   }
 }
 function test($array,$root){
@@ -132,6 +132,40 @@ require 'pages/data/Donnees.inc.php';
 <?php test($Hierarchie,'Aliment');?>
 
 
+<div class="penis">
+<?php
+$sql = "SELECT * FROM Cocktail WHERE ingredients = '" . $conn->real_escape_string($_GET['ingredients']) ."'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      ?>
+<div class="sexe">
+    <div class="description">
+  <span class="titre"><?php echo $row['titre'] ?></span>
+  <span class="recette">
+    <?php
+      $recettes = explode('|',$row['recette'],-1);
+      echo "<ul>";
+      foreach($recettes as $recette){
+        echo "<li>".$recette . "</li>";
+      }
+      echo "</ul>";
+
+  ?>
+  </span>
+  <span class="preparation"><?php echo $row['preparation']?></span>
+</div>
+</div>
+      <?php
+    }
+} else {
+    echo "0 results";
+}
+
+
+?>
+</div>
 <?php
   }
   $conn->close();

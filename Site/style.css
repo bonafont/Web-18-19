@@ -2,28 +2,29 @@ body{
   margin: 0px;
 }
 
-/* 
+/*
 BEGIN
 NAVIGATION BAR
 */
 nav > ul{
- 
+
 }
-nav {    
+nav {
   display: block;
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif
 }
 nav ul {
-  margin: 0;
+  margin-top: 0;
   padding:0;
   list-style: none;
   box-shadow: 4px 7px 11px grey;
+  margin-bottom: 20px;
 }
 .nav a {
-  display:block; 
-  background: #111; 
-  color: #fff; 
+  display:block;
+  background: #111;
+  color: #fff;
   text-decoration: none;
   padding: 0.8em 1.8em;
   text-transform: uppercase;
@@ -33,9 +34,9 @@ nav ul {
   position: relative;
 }
 .nav span {
-  display:block; 
+  display:block;
   background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(114,114,114,1) 100%);
-  color: #fff; 
+  color: #fff;
   text-decoration: none;
   padding: 0.8em 1.8em;
   text-transform: uppercase;
@@ -44,12 +45,12 @@ nav ul {
   text-shadow: 0 -1px 0 #000;
   position: relative;
 }
-.nav{  
-  vertical-align: top; 
+.nav{
+  vertical-align: top;
   display: inline-block;
-  box-shadow: 
-    1px -1px -1px 1px #000, 
-    -1px 1px -1px 1px #fff, 
+  box-shadow:
+    1px -1px -1px 1px #000,
+    -1px 1px -1px 1px #fff,
     0 0 6px 3px #fff;
   width: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(114,114,114,1) 100%);
@@ -62,35 +63,35 @@ nav ul {
   padding-top: 10px;
   padding-bottom:10px;
 }
-.nav > li { 
-  float: left; 
-  /*border-bottom: 4px #aaa solid;*/ 
-  margin-right: 1px; 
-} 
-.nav > li > a { 
-  margin-bottom: 1px;
-  box-shadow: inset 0 2em .33em -0.5em #555; 
+.nav > li {
+  float: left;
+  /*border-bottom: 4px #aaa solid;*/
+  margin-right: 1px;
 }
-.nav > li:hover, .nav > li:hover > a { 
+.nav > li > a {
+  margin-bottom: 1px;
+  box-shadow: inset 0 2em .33em -0.5em #555;
+}
+.nav > li:hover, .nav > li:hover > a {
   border-bottom-color: orange;
 }
-.nav li:hover > a { 
-  color:orange; 
+.nav li:hover > a {
+  color:orange;
 }
-.nav > li:first-child { 
+.nav > li:first-child {
   border-radius: 4px 0 0 4px;
-} 
-.nav > li:first-child > a { 
+}
+.nav > li:first-child > a {
   border-radius: 4px 0 0 0;
 }
-.nav > li:last-child { 
-  border-radius: 0 0 4px 0; 
+.nav > li:last-child {
+  border-radius: 0 0 4px 0;
   margin-right: 0;
-} 
-.nav > li:last-child > a { 
+}
+.nav > li:last-child > a {
   border-radius: 0 4px 0 0;
 }
-.nav li li a { 
+.nav li li a {
   margin-top: 1px;
 }
  .nav ul {
@@ -106,7 +107,6 @@ nav ul {
 }
 .nav > li:hover > ul {
   left: auto;
-  padding-top: 5px;
   margin-left: -2px;
   min-width: 100%;
   opacity: 1;
@@ -123,14 +123,14 @@ nav ul {
 .nav > li li > ul{
 opacity: 0;
 }
-.nav > li li:hover > ul { 
+.nav > li li:hover > ul {
   transition: opacity .25s ease;
   opacity: 1;
   left: 100%;
   padding-left: 1px;
   top: -1px;
 }
-/* 
+/*
 END
 NAVIGATION BAR
 */
@@ -157,4 +157,46 @@ NAVIGATION BAR
 }
 .center{
   text-align: center;
+}
+.penis{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: auto;
+  justify-content: center;
+  text-align: justify;
+}
+.sexe{
+  width: 400px;
+  margin: 10px;
+  background-color: rgba(197, 200, 204,0.965);
+  border-radius: 10px;
+  box-shadow: 4px 7px 11px grey;
+}
+.description{
+  display: block;
+  margin: 10px;
+}
+.recette{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.recette ul{
+  padding: 20px;
+  font-weight: bold;
+}
+
+.recette li{
+  list-style : circle;
+}
+.titre{
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+html{
+  background-image: url("images/KACEDOCKTAILS_LOGO.png");
 }
