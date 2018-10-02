@@ -143,7 +143,16 @@ NAVIGATION BAR
   padding: 0px;
   text-align: center;
 }
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 .logo{
+  animation: 1s 0s 1 rotate;
   position: relative;
   height: 100%;
   vertical-align: middle;
@@ -165,7 +174,19 @@ NAVIGATION BAR
   justify-content: center;
   text-align: justify;
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(100%);
+    opacity:0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .sexe{
+  animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideInFromLeft;
   width: 400px;
   margin: 10px;
   background-color: rgba(197, 200, 204,0.965);
@@ -196,6 +217,9 @@ html{
   background-image: url("images/KACEDOCKTAILS_LOGO.png");
 }
 .photos{
-  width: 50px;
-  height: 50px;
+  margin-top:10px;
+  height: 150px;
+  object-fit: scale-down;
+  box-shadow: 4px 7px 11px grey;
+  border-radius: 10px;
 }
