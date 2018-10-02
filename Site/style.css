@@ -6,9 +6,7 @@ body{
 BEGIN
 NAVIGATION BAR
 */
-nav > ul{
 
-}
 nav {
   display: block;
   font-size: 12px;
@@ -175,14 +173,11 @@ NAVIGATION BAR
   box-shadow: 4px 7px 11px grey;
 }
 .description{
-  display: block;
-  margin: 10px;
-}
-.recette{
   display: flex;
+  flex-flow: column;
+  margin: 10px;
   justify-content: center;
   align-items: center;
-  text-align: left;
 }
 .recette ul{
   padding: 20px;
@@ -199,4 +194,8 @@ NAVIGATION BAR
 }
 html{
   background-image: url("images/KACEDOCKTAILS_LOGO.png");
+}
+.photos{
+  width: 50px;
+  height: 50px;
 }

@@ -11,6 +11,11 @@
 FONCTIONS POUR LA HIERARCHIE
 
 */
+
+function photostr($str){
+  $table = array(" " => "_", "ï"=>"i",'ñ'=>'n',"'"=>"");
+  return ucfirst(strtolower(strtr($str,$table)));
+}
 function test2($array, $value,$i){
     if(!empty($array[$value]["sous-categorie"])){ // si la ss-categorie n'est pas vide
       echo '<li><span>'.$value.'</span>';
@@ -145,24 +150,31 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
       ?>
-<div class="sexe">
+  <div class="sexe">
     <div class="description">
-  <span class="titre"><?php echo $row['titre'] ?></span>
-  <span class="recette">
-    <?php
-      $recettes = explode('|',$row['recette'],-1);
-      echo "<ul>";
-      foreach($recettes as $recette){
-        echo "<li>".$recette . "</li>";
+      <span class="titre"><?php echo $row['titre'] ?></span>
+      <img src="<?php 
+      $photostr = photostr($row['titre']);
+      $photostr = "assets/Photos/". $photostr.".jpg";
+      if(file_exists($photostr)){
+        echo $photostr;
       }
-      echo "</ul>";
-
-  ?>
-  </span>
-  <span class="preparation"><?php echo $row['preparation']?></span>
-</div>  display: block;
-  margin: auto;
-</div>
+      else{
+        echo "images/KACEDOCKTAILS_LOGO.png";
+      }?>" class="photos"/>
+      <span class="recette">
+        <?php
+        $recettes = explode('|',$row['recette'],-1);
+        echo "<ul>";
+        foreach($recettes as $recette){
+          echo "<li>".$recette . "</li>";
+        }
+        echo "</ul>";
+        ?>
+      </span>
+      <span class="preparation"><?php echo $row['preparation']?></span>
+    </div>
+  </div>
       <?php
     }
 } else {
