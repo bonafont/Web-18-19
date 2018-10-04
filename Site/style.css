@@ -1,8 +1,12 @@
 html{
   background-image: url("images/KACEDOCKTAILS_LOGO.png");
+  height: 100%;
 }
 body{
   margin: 0px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 
 /*
@@ -174,8 +178,6 @@ NAVIGATION BAR
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
-  margin: auto;
   justify-content: center;
   text-align: justify;
 }
@@ -223,4 +225,11 @@ NAVIGATION BAR
   object-fit: scale-down;
   box-shadow: 4px 7px 11px grey;
   border-radius: 10px;
+}
+.connection{
+display: flex;
+height: 100%;
+flex-flow: column;
+justify-content: center;
+align-items: center;
 }

@@ -38,7 +38,7 @@ function test($array,$root){
         test2($array,$value,$i);
       }
       ?>
-          <li class="connect_button"><a href="connection.php">Se connecter</a></li>
+          <li class="connect_button"><a href="index.php?connection">Se connecter</a></li>
         </ul>
       </nav>
 <?php

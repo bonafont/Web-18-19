@@ -9,6 +9,10 @@ function set_header(){
     <title>KACEDOCKTAILS</title>
   </head>
   <body>
+    <div class="banner">
+      <img class="logo" src="images/KACEDOCKTAILS_LOGO.png" alt="logo">
+      <span class="moto">KACEDOCKTAILS</span>
+    </div>
 <?php
 }
 ?>
