@@ -143,6 +143,12 @@ NAVIGATION BAR
   padding: 0px;
   text-align: center;
 }
+.logo{
+  animation: 1s 0s 1 rotate;
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+}
 @keyframes rotate{
   0%{
     transform: rotate(0deg);
@@ -151,16 +157,21 @@ NAVIGATION BAR
     transform: rotate(360deg);
   }
 }
-.logo{
-  animation: 1s 0s 1 rotate;
-  position: relative;
-  height: 100%;
-  vertical-align: middle;
-}
 .moto{
+  display: inline-block;
   color:white;
   font-size: 50px;
   margin-left: 20px;
+  animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideleft;
+}
+
+@keyframes slideleft{
+  0%{
+    transform :translateX(100%); 
+  }
+  100%{
+    transform :translateX(0); 
+  }
 }
 .center{
   text-align: center;
@@ -174,7 +185,14 @@ NAVIGATION BAR
   justify-content: center;
   text-align: justify;
 }
-
+.sexe{
+  animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideInFromLeft;
+  width: 400px;
+  margin: 10px;
+  background-color: rgba(197, 200, 204,0.965);
+  border-radius: 10px;
+  box-shadow: 4px 7px 11px grey;
+}
 @keyframes slideInFromLeft {
   0% {
     transform: translateY(100%);
@@ -184,14 +202,6 @@ NAVIGATION BAR
     transform: translateY(0);
     opacity: 1;
   }
-}
-.sexe{
-  animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideInFromLeft;
-  width: 400px;
-  margin: 10px;
-  background-color: rgba(197, 200, 204,0.965);
-  border-radius: 10px;
-  box-shadow: 4px 7px 11px grey;
 }
 .description{
   display: flex;
