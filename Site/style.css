@@ -228,8 +228,11 @@ NAVIGATION BAR
 }
 .connection{
 display: flex;
-height: 100%;
+width: 300px;
+height: 300px;
+margin: auto;
 flex-flow: column;
 justify-content: center;
 align-items: center;
+background-color: grey;
 }

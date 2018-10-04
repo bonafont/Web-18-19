@@ -5,6 +5,11 @@ function photostr($str){
   return ucfirst(strtolower(strtr($str,$table)));
 }
 
+function descrstr($str){
+    $table = array("!)"=>"!)","1."=>"1.","2."=>"2.","..."=>"...", "." => ".<br>","!!"=>"!!<br>","!!!"=>"!!<br>","!"=>"!<br>");
+    return strtr($str,$table);
+}
+
 /*
 
 

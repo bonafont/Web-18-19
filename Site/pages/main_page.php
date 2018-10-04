@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         echo "</ul>";
         ?>
       </span>
-      <span class="preparation"><?php echo $row['preparation']?></span>
+      <span class="preparation"><?php echo descrstr($row['preparation'])?></span>
     </div>
   </div>
 <?php
