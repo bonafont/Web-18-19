@@ -26,12 +26,21 @@ function test2($array, $value,$i){
   }
 }
 function test($array,$root){
-      echo '<nav><ul class="nav">';
+  ?>
+      <nav>
+        <ul class="nav">
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+  <?php
       $i = 0;
       foreach ($array[$root]['sous-categorie'] as $key => $value) { // elt de la ss-categorie
         test2($array,$value,$i);
       }
-      echo '</ul></nav>';
-
+      ?>
+          <li class="connect_button"><a href="connection.php">Se connecter</a></li>
+        </ul>
+      </nav>
+<?php
 }
 ?>

@@ -1,6 +1,8 @@
 <?php
   require 'pages/functions.php';
   require 'pages/data/Donnees.inc.php';
+  require 'pages/error.php';
+  require 'pages/Header.php';
   $servername = "localhost";
   $username = "root";
   $password = "root";
@@ -8,9 +10,7 @@
   $conn = new mysqli($servername, $username, $password);
   // Check connection
   if ($conn->connect_error) {
-      echo "La connection vers la base de donnée n'a pas pu être établi, veuillez vérifier les identifiants.<br>";
-      die("Connection failed: " . $conn->connect_error);
-
+    error_handling($conn->connect_error);
   }
   // Create database
   if ($conn->select_db('Cocktail') === FALSE) {
@@ -18,13 +18,8 @@
   }
   else{
     // CODE HERE
+      set_header();
     ?>
-    <html>
-    <head>
-      <link rel="stylesheet" text="text/css" href="style.css">
-    <title>Test</title>
-    </head>
-    <body>
 <div class="banner">
   <img class="logo" src="images/KACEDOCKTAILS_LOGO.png" alt="logo">
   <span class="moto">KACEDOCKTAILS</span>

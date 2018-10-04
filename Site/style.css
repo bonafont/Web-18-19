@@ -66,7 +66,6 @@ nav ul {
 }
 .nav > li {
   float: left;
-  /*border-bottom: 4px #aaa solid;*/
   margin-right: 1px;
 }
 .nav > li > a {
@@ -78,19 +77,6 @@ nav ul {
 }
 .nav li:hover > a {
   color:orange;
-}
-.nav > li:first-child {
-  border-radius: 4px 0 0 4px;
-}
-.nav > li:first-child > a {
-  border-radius: 4px 0 0 0;
-}
-.nav > li:last-child {
-  border-radius: 0 0 4px 0;
-  margin-right: 0;
-}
-.nav > li:last-child > a {
-  border-radius: 0 4px 0 0;
 }
 .nav li li a {
   margin-top: 1px;
@@ -130,6 +116,11 @@ opacity: 0;
   left: 100%;
   padding-left: 1px;
   top: -1px;
+}
+
+/*CONNECT BUTTON */
+.connect_button{
+  float: right !important;
 }
 /*
 END

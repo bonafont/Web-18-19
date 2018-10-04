@@ -2,16 +2,16 @@
 if(!isset($_POST['install_submit'])){
 ?>
   <html>
-  <head>
-  <title>Initialisation de la base de donnée COCKTAIL</title>
-  </head>
+    <head>
+      <title>Initialisation de la base de donnée COCKTAIL</title>
+    </head>
   <body>
-  <form action="" method="post" style="display:flex;align-items:center;justify-content:center;flex-flow:column;height:100%;margin:0;text-align:center;">
-      <u><h1>Le base de données COCKTAIL va être générée à l'aide du magnifique cours de PHP-MySQL conçu par le fameux NOURREDINE ZEJLI.</h1></u>
-      <h3>Ce script va générée une table appelé Cocktail, Veuillez être sûr que cette table n'existe pas.<br>Normalement ce script est conçu pour marcher parfaitement avec easyPHP mais si ce n'est pas le cas, veuillez vérifier que les identifiants suivant sont bien existant dans votre base de donnée :</h3>
+    <form action="" method="post" style="display:flex;align-items:center;justify-content:center;flex-flow:column;height:100%;margin:0;text-align:center;">
+        <u><h1>Le base de données COCKTAIL va être générée à l'aide du magnifique cours de PHP-MySQL conçu par le fameux NOURREDINE ZEJLI.</h1></u>
+        <h3>Ce script va générée une table appelé Cocktail, Veuillez être sûr que cette table n'existe pas.<br>Normalement ce script est conçu pour marcher parfaitement avec easyPHP mais si ce n'est pas le cas, veuillez vérifier que les identifiants suivant sont bien existant dans votre base de donnée :</h3>
         <h2>Identifiant: root<br>Mot de passe : root</h2>
-      <input type="submit" name="install_submit" value="Prêt?"  />
-  </form>
+        <input type="submit" name="install_submit" value="Prêt?"  />
+    </form>
 
 
 <?php
