@@ -1,3 +1,6 @@
+html{
+  background-image: url("images/KACEDOCKTAILS_LOGO.png");
+}
 body{
   margin: 0px;
 }
@@ -167,10 +170,10 @@ NAVIGATION BAR
 
 @keyframes slideleft{
   0%{
-    transform :translateX(100%); 
+    transform :translateX(100%);
   }
   100%{
-    transform :translateX(0); 
+    transform :translateX(0);
   }
 }
 .center{
@@ -222,9 +225,6 @@ NAVIGATION BAR
   font-weight: bold;
   text-align: center;
   display: block;
-}
-html{
-  background-image: url("images/KACEDOCKTAILS_LOGO.png");
 }
 .photos{
   margin-top:10px;
