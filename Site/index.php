@@ -3,6 +3,7 @@
   require 'pages/data/Donnees.inc.php';
   require 'pages/error.php';
   require 'pages/Header.php';
+  require 'pages/connection.php';
   $servername = "localhost";
   $username = "root";
   $password = "root";
@@ -21,7 +22,7 @@
     set_header();
     test($Hierarchie,'Aliment');
     if(isset($_GET['connection']))
-      require 'pages/connection.php';
+      require 'pages/connection_page.php';
     else
       require 'pages/main_page.php';
   }

@@ -1,19 +1,16 @@
-<h1 style="text-align:center;">CONNEXION</h1>
-
 <?php
+  $form_disappear = 0;
   if(isset($_POST['login_submit'])){
-    echo "<h1>Bonjour : ". $_POST["login"] . ", JVOUS BESE</h1>";
+    $cookie_name = "user";
+    $cookie_value = $_POST['login'];
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    session_start();
+    $_SESSION['user'] = $_POST['login'];
+    $form_disappear = 1;
   }
-  else{
-
- ?>
-<form action="index.php?connection" method="post" class="connection">
-  <label>Enter your Login :</label>
-  <input type="textbox" name="login"/>
-  <label>Enter your Password :</label>
-  <input type="password" name="password"/>
-  <input type="submit" name="login_submit" value="Login!"/>
-</form>
-<?php
+  elseif(isset($_COOKIE['user'])){
+    session_start();
+    $_SESSION['user'] = $_COOKIE['user'];
+    $form_disappear = 1;
 }
-?>
+ ?>

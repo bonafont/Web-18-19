@@ -9,7 +9,6 @@ function descrstr($str){
     $table = array("!)"=>"!)","1."=>"1.","2."=>"2.","..."=>"...", "." => ".<br>","!!"=>"!!<br>","!!!"=>"!!<br>","!"=>"!<br>");
     return strtr($str,$table);
 }
-
 /*
 
 
@@ -42,8 +41,8 @@ function test($array,$root){
       foreach ($array[$root]['sous-categorie'] as $key => $value) { // elt de la ss-categorie
         test2($array,$value,$i);
       }
-      ?>
-          <li class="connect_button"><a href="index.php?connection">Se connecter</a></li>
+      ?> <li class="connect_button"><a href="index.php?connection">Se connecter</a></li>
+      <li class="user_name"><span>Bonjour <?php echo "".(isset($_SESSION['user']) ? $_SESSION['user'] : "Anonymous");?></span></li>
         </ul>
       </nav>
 <?php

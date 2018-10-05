@@ -236,3 +236,6 @@ justify-content: center;
 align-items: center;
 background-color: grey;
 }
+.user_name{
+  float: right !important;
+}
