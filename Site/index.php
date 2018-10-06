@@ -15,16 +15,18 @@
   }
   // Create database
   if ($conn->select_db('Cocktail') === FALSE) {
-    require 'pages/install.php';
+    include 'pages/install.php';
   }
   else{
-    // CODE HERE
     set_header();
-    test($Hierarchie,'Aliment');
+    navbar($Hierarchie,'Aliment');
     if(isset($_GET['connection']))
-      require 'pages/connection_page.php';
+      include 'pages/connection_page.php';
+    elseif(isset($_GET['deconnection']))
+      include 'pages/deconnection_page.php';
     else
-      require 'pages/main_page.php';
+      include 'pages/main_page.php';
+
   }
   $conn->close();
 ?>
