@@ -4,9 +4,9 @@ html{
 }
 body{
   margin: 0px;
+  min-height: 100%;
   display: flex;
   flex-flow: column;
-  height: 100%;
 }
 
 /*
@@ -17,7 +17,7 @@ NAVIGATION BAR
 nav {
   display: block;
   font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 nav ul {
   margin-top: 0;
@@ -64,6 +64,8 @@ nav ul {
 .nav li {
   position: relative;
 }
+
+
 .nav li span, .nav li a{
   padding-top: 10px;
   padding-bottom:10px;

@@ -1,8 +1,9 @@
-<h1 style="text-align:center;">CONNEXION</h1>
+
 
 <?php
-if($form_disappear == 0){
+if($form_disappear_status == 0){
   ?>
+  <h1 style="text-align:center;">CONNEXION</h1>
   <form action="index.php?connection" method="post" class="connection">
     <label>Enter your Login :</label>
     <input type="textbox" name="login"/>
@@ -13,6 +14,6 @@ if($form_disappear == 0){
 <?php
 }
 else{
-  echo '<h1>Bonjour ! '. $_SESSION['user'];
+  echo '<h1>Bonjour  '. $_SESSION['user']. ' !';
 }
  ?>
