@@ -74,6 +74,28 @@ if($conn->query("CREATE DATABASE Cocktail") === TRUE){
         }
       }
     }
+
+    /*
+
+    CREATION DE LA TABLE USERS
+
+
+    */
+    $sql = "CREATE TABLE Users (
+                  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                  name TEXT NOT NULL,
+                  password TEXT NOT NULL
+
+          )";
+    if($conn->query($sql) !== TRUE){
+    /*
+
+    ERREUR CREATION DE LA TABLE USERS
+
+    */
+      echo "Error creating table Users: " . $conn->error;
+      exit(-1);
+    }
     header("Location: index.php");
 }
 }

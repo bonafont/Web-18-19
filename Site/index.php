@@ -25,6 +25,8 @@
       include 'pages/connection_page.php';
     elseif(isset($_GET['deconnection']))
       include 'pages/deconnection_page.php';
+    elseif(isset($_GET['register']))
+      include 'pages/register_page.php';
     else
       include 'pages/main_page.php';
 

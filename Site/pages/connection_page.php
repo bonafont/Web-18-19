@@ -10,10 +10,11 @@ if($form_disappear_status == 0){
     <label>Enter your Password :</label>
     <input type="password" name="password"/>
     <input type="submit" name="login_submit" value="Login!"/>
+    <a href="index.php?register">Vous n'avez de compte?</a>
   </form>
 <?php
 }
 else{
-  echo '<h1>Bonjour  '. $_SESSION['user']. ' !';
+  echo '<h1>Bonjour  '. $_SESSION['user']. ' !</h1>';
 }
  ?>
