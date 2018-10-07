@@ -1,10 +1,5 @@
 <?php
   session_start();
-  require 'pages/functions.php';
-  require 'pages/data/Donnees.inc.php';
-  require 'pages/error.php';
-  require 'pages/Header.php';
-  require 'pages/connection.php';
   $servername = "localhost";
   $username = "root";
   $password = "root";
@@ -19,6 +14,11 @@
     include 'pages/install.php';
   }
   else{
+    require 'pages/functions.php';
+    require 'pages/data/Donnees.inc.php';
+    require 'pages/error.php';
+    require 'pages/Header.php';
+    require 'pages/connection.php';
     set_header();
     navbar($Hierarchie,'Aliment');
     if(isset($_GET['connection']))
