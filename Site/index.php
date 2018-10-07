@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require 'pages/functions.php';
   require 'pages/data/Donnees.inc.php';
   require 'pages/error.php';
