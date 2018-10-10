@@ -122,6 +122,10 @@ opacity: 0;
   left: 100%;
   padding-left: 1px;
   top: -1px;
+  overflow-y: visible;
+}
+.nav > li li > ul {
+  overflow-y: hidden;
 }
 
 /*CONNECT BUTTON */
