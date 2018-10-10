@@ -8,15 +8,30 @@ function connect_link(){
 }
 
 /*
-    DECONNECTION LOGOUT PROCEDURE
+  REGISTER PROCEDURE
 */
-if(isset($_SESSION['user']) && isset($_GET['deconnection'])){
-      setcookie("user", "", time() - 3600,"/");
-      session_destroy();
-      header('Location: index.php?deconnection');
-      exit;
+$succesful_registration =0;
+if(isset($_GET['register'])){
+  if(isset($_POST['register_submit'])){
+    $error_register_form = 0;
+    if(empty($_POST['username'])){
+      $error_register_form = 1;
+    }
+    if(empty($_POST['password'])){
+      $error_register_form = 1;
+    }
+    if($error_register_form == 0){
+      $sql = "INSERT INTO Users (name, password) VALUES ('". $_POST['username'] ."', '". $_POST['password'] ."')";
+      if (!($conn->query($sql) === TRUE)) {
+        //ERREUR INSERTION DANS LA BDD
+        error_handling($conn->error);
+      }
+      else{
+        $succesful_registration =1;
+      }
+    }
+  }
 }
-
 
 
 
@@ -38,5 +53,15 @@ $form_disappear_status = 1;
         $_SESSION['user'] = $_COOKIE['user'];
         $form_disappear_status = 1;
       }
+  }
+
+  /*
+      DECONNECTION LOGOUT PROCEDURE
+  */
+  if(isset($_SESSION['user']) && isset($_GET['deconnection'])){
+        setcookie("user", "", time() - 3600,"/");
+        session_destroy();
+        header('Location: index.php?deconnection');
+        exit;
   }
  ?>
