@@ -1,4 +1,6 @@
 <?php
+  require 'pages/error.php';
+  require 'pages/data/Donnees.inc.php';
   session_start();
   $servername = "localhost";
   $username = "root";
@@ -15,8 +17,6 @@
   }
   else{
     require 'pages/functions.php';
-    require 'pages/data/Donnees.inc.php';
-    require 'pages/error.php';
     require 'pages/Header.php';
     require 'pages/connection.php';
     set_header();
@@ -32,6 +32,5 @@
 
   }
   $conn->close();
+  include 'pages/Footer.php';
 ?>
-</body>
-</html>

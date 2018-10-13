@@ -8,6 +8,22 @@ body{
   display: flex;
   flex-flow: column;
 }
+.main_body{
+  flex-grow: 1;
+}
+footer{
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: 1;
+}
+footer span{
+  text-align: center;
+  font-style: italic;
+  display: block;
+}
 
 /*
 BEGIN
@@ -24,7 +40,6 @@ nav ul {
   padding:0;
   list-style: none;
   box-shadow: 4px 7px 11px grey;
-  margin-bottom: 20px;
 }
 .nav a {
   display:block;
@@ -142,7 +157,7 @@ NAVIGATION BAR
   top:0px;
   width:100%;
   background-color:black;
-  height: 300px;
+  height: 150px;
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -164,7 +179,7 @@ NAVIGATION BAR
 .moto{
   display: inline-block;
   color:white;
-  font-size: 50px;
+  font-size: 25px;
   margin-left: 20px;
   animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideleft;
 }
@@ -186,6 +201,7 @@ NAVIGATION BAR
   flex-wrap: wrap;
   justify-content: center;
   text-align: justify;
+  flex-grow: 1;
 }
 .sexe{
   animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideInFromLeft;

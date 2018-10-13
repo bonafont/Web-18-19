@@ -46,6 +46,7 @@ function navbar($array,$root){
       <li class="user_name"><span>Bonjour <?php echo "".(isset($_SESSION['user']) ? $_SESSION['user'] : "Anonymous");?></span></li>
         </ul>
       </nav>
+      <div class="main_body">
 <?php
 }
 ?>

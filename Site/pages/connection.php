@@ -21,7 +21,9 @@ if(isset($_GET['register'])){
       $error_register_form = 1;
     }
     if($error_register_form == 0){
-      $sql = "INSERT INTO Users (name, password) VALUES ('". $_POST['username'] ."', '". $_POST['password'] ."')";
+      $username = $conn->real_escape_string($_POST['username']);
+      $password = $conn->real_escape_string($_POST['password']);
+      $sql = "INSERT INTO Users (name, password) VALUES ('". $username ."', '". $password ."')";
       if (!($conn->query($sql) === TRUE)) {
         //ERREUR INSERTION DANS LA BDD
         error_handling($conn->error);
