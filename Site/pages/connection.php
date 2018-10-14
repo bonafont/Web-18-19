@@ -20,8 +20,13 @@ if(isset($_GET['register'])){
     if(empty($_POST['password'])){
       $error_register_form = 1;
     }
+    $username = $conn->real_escape_string($_POST['username']);
+    $sql = "SELECT name FROM Users WHERE name = BINARY '$username'";
+    $result = $conn->query($sql);
+    if($result->num_rows > 0){
+      $error_register_form = 1;
+    }
     if($error_register_form == 0){
-      $username = $conn->real_escape_string($_POST['username']);
       $password = $conn->real_escape_string(password_hash($_POST['password'], PASSWORD_DEFAULT));
       $sql = "INSERT INTO Users (name, password) VALUES ('$username', '$password')";
       if (!($conn->query($sql) === TRUE)) {
