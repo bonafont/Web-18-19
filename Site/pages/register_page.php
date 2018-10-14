@@ -4,7 +4,7 @@ if($error_register_form ==1){
   <h1 style="color:red;">ERROR</h1>
   <?php
 }
-if($succesful_registration ==1){
+if($successful_registration ==1){
   ?><h1>Compte crée</h1>
   <?php
 }
