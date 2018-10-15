@@ -10,6 +10,7 @@ body{
 }
 .main_body{
   flex-grow: 1;
+  display: flex;
 }
 footer{
   background-color: black;
@@ -195,13 +196,23 @@ NAVIGATION BAR
 .center{
   text-align: center;
 }
+.vagin{
+  width: 100%;
+}
+.connection_layout{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  flex-flow:column;
+}
 .penis{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   text-align: justify;
-  flex-grow: 1;
+  width: 100%;
 }
 .sexe{
   animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideInFromLeft;
@@ -250,9 +261,8 @@ NAVIGATION BAR
 }
 .connection{
 display: flex;
-width: 300px;
-height: 300px;
-margin: auto;
+min-width: 300px;
+min-height: 300px;
 flex-flow: column;
 justify-content: center;
 align-items: center;

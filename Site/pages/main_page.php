@@ -1,3 +1,4 @@
+<div class="vagin">
 <div class="penis">
 <?php
 if(empty($_GET['ingredients'])){
@@ -21,7 +22,7 @@ if ($result->num_rows > 0) {
         echo $photostr;
       }
       else{
-        echo "images/KACEDOCKTAILS_LOGO.png";
+        echo "images/KACEDOCKTAILS_INTERROGATION.png";
       }?>" class="photos"/>
       <span class="recette">
         <?php
@@ -42,4 +43,5 @@ if ($result->num_rows > 0) {
       echo "Aucun Cocktail ne contient de " . $_GET['ingredients'];
       }
 ?>
+</div>
 </div>
