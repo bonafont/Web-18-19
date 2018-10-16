@@ -11,6 +11,9 @@
   if ($conn->connect_error) {
     error_handling($conn->connect_error);
   }
+  if (!$conn->set_charset("utf8")) {
+    error_handling("Error loading character set utf8: %s\n" . $conn->error);
+  }
   // Create database
   if ($conn->select_db('Cocktail') === FALSE) {
     include 'pages/install.php';

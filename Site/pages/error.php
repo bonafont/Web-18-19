@@ -4,6 +4,7 @@ function error_handling($error){
   ?>
   <html>
     <head>
+      <meta charset="utf-8"/>
       <title>Erreur connection !</title>
     </head>
     <body>

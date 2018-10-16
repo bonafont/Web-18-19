@@ -1,3 +1,4 @@
+<div class="connection_layout">
 <?php
 if($error_register_form ==1){
   ?>
@@ -19,3 +20,4 @@ else{
   <input type="submit" name="register_submit" value="Envoyer!"/>
 </form>
 <?php } ?>
+</div>
