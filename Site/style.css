@@ -252,21 +252,29 @@ NAVIGATION BAR
   list-style : circle;
 }
 .favoris{
-  align-self:center;
+  align-self:flex-end;
   display:flex;
   align-items:center;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  color: black;
+  text-decoration: none;
 }
-.favoris span{
-  transform :translateX(100px);
+.favoris > span{
+  display: flex;
+  margin-right: -25px;
+  overflow: hidden;
+}
+.favoris span>span{
+  transform :translateX(200px);
   transition: .5s;
   opacity: 0;
-  visibility: hidden;
+  padding-right: 35px;
+
 }
-.favoris:hover span{
+.favoris:hover span>span{
   transform :translateX(0px);
   opacity: 1;
-  visibility:visible;
 
 }
 .favoris img{
@@ -274,13 +282,12 @@ NAVIGATION BAR
   filter: drop-shadow(-3px 3px 3px grey) grayscale(75%);
   transition: .5s;
   z-index: 1;
-  transform: translateX(70px);
   transform-origin: 50% 55%;
 
 }
 .favoris:hover img{
   filter: drop-shadow(-3px 3px 1px grey) grayscale(0%);
-  transform: rotate(200deg);
+  transform: rotate(360deg);
 }
 .titre{
   font-weight: bold;
