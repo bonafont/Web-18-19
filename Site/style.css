@@ -223,6 +223,8 @@ NAVIGATION BAR
   background-color: rgba(197, 200, 204,0.965);
   border-radius: 10px;
   box-shadow: 4px 7px 11px grey;
+  display: flex;
+  flex-flow: column;
 }
 @keyframes slideInFromLeft {
   0% {
@@ -238,8 +240,8 @@ NAVIGATION BAR
   display: flex;
   flex-flow: column;
   margin: 10px;
-  justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 .recette ul{
   padding: 20px;
@@ -248,6 +250,37 @@ NAVIGATION BAR
 
 .recette li{
   list-style : circle;
+}
+.favoris{
+  align-self:center;
+  display:flex;
+  align-items:center;
+  margin-bottom: 10px;
+}
+.favoris span{
+  transform :translateX(100px);
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.favoris:hover span{
+  transform :translateX(0px);
+  opacity: 1;
+  visibility:visible;
+
+}
+.favoris img{
+  width:50px;
+  filter: drop-shadow(-3px 3px 3px grey) grayscale(75%);
+  transition: .5s;
+  z-index: 1;
+  transform: translateX(70px);
+  transform-origin: 50% 55%;
+
+}
+.favoris:hover img{
+  filter: drop-shadow(-3px 3px 1px grey) grayscale(0%);
+  transform: rotate(200deg);
 }
 .titre{
   font-weight: bold;

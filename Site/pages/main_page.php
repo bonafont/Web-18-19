@@ -35,6 +35,11 @@ if ($result->num_rows > 0) {
         ?>
       </span>
       <span class="preparation"><?php echo descrstr($row['preparation'])?></span>
+
+    </div>
+    <div class="favoris">
+    <img src="images/Star.png"/>
+    <span>Ajouter &agrave; vos favoris !</span>
     </div>
   </div>
 <?php
