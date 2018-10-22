@@ -37,11 +37,20 @@ if ($result->num_rows > 0) {
       <span class="preparation"><?php echo descrstr($row['preparation'])?></span>
 
     </div>
-    <a class="favoris" href="PENIS">
-      <span>
-      <span>Ajouter &agrave; vos favoris !</span>
+    <a class="favoris" <?php
+    if(isset($_SESSION['user'])){
+      ?> href=" <?php
+      if(isset($_GET['ingredients'])){
+        echo "?ingredients=". $_GET['ingredients']."&favoris=".$row['titre'];
+      }else{
+        echo "?favoris=".$row['titre'];
+      }?>"<?php
+    }
+    ?>/>
+    <span>
+      <span><?php echo (!isset($_SESSION['user'])) ? "Connectez-vous pour ajouter &agrave; vos favoris !" : "Ajouter &agrave; vos favoris !";?></span>
     </span>
-      <img src="images/Star.png"/>
+      <img src="images/Star.png" class="<?php echo (in_array($row['titre'],$favorites_list)) ? "favoris_img_delete" : "favoris_img" ;?>"/>
   </a>
   </div>
 <?php

@@ -85,7 +85,6 @@ if($conn->query("CREATE DATABASE Cocktail") === TRUE){
                   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                   name TEXT NOT NULL,
                   password TEXT NOT NULL
-
           )";
     if($conn->query($sql) !== TRUE){
     /*
@@ -94,6 +93,20 @@ if($conn->query("CREATE DATABASE Cocktail") === TRUE){
 
     */
       echo "Error creating table Users: " . $conn->error;
+      exit(-1);
+    }
+    $sql = "CREATE TABLE Favoris (
+                  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                  name_cocktail TEXT NOT NULL,
+                  user TEXT NOT NULL
+          )";
+    if($conn->query($sql) !== TRUE){
+    /*
+
+    ERREUR CREATION DE LA TABLE USERS
+
+    */
+      echo "Error creating table Favoris: " . $conn->error;
       exit(-1);
     }
     header("Location: index.php");

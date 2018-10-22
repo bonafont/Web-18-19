@@ -19,6 +19,7 @@
     include 'pages/install.php';
   }
   else{
+    require 'pages/favorites.php';
     require 'pages/functions.php';
     require 'pages/Header.php';
     require 'pages/connection.php';

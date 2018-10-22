@@ -278,15 +278,27 @@ NAVIGATION BAR
 
 }
 .favoris img{
+    transform-origin: 50% 55%;
+    transition: .5s;
+}
+.favoris_img{
   width:50px;
   filter: drop-shadow(-3px 3px 3px grey) grayscale(75%);
-  transition: .5s;
   z-index: 1;
-  transform-origin: 50% 55%;
 
 }
-.favoris:hover img{
+.favoris:hover .favoris_img{
   filter: drop-shadow(-3px 3px 1px grey) grayscale(0%);
+  transform: rotate(360deg);
+}
+.favoris_img_delete{
+  width:50px;
+  filter: drop-shadow(-3px 3px 3px grey) grayscale(75%)hue-rotate(50deg);
+  z-index: 1;
+
+}
+.favoris:hover .favoris_img_delete{
+  filter: drop-shadow(-3px 3px 1px grey) grayscale(0%)hue-rotate(-60deg)contrast(100%)saturate(200%);
   transform: rotate(360deg);
 }
 .titre{
