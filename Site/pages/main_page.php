@@ -1,8 +1,13 @@
 <div class="vagin">
 <div class="penis">
 <?php
-if(empty($_GET['ingredients'])){
+if(empty($_GET['ingredients'])&& !isset($_GET['favoris_nav'])){
   $sql = "SELECT * FROM Cocktail GROUP BY titre";
+}
+else if(isset($_GET['favoris_nav'])){
+  ?><h1>MES FAVORIS</h1><?php
+  $users = $conn->real_escape_string($_SESSION['user']);
+  $sql = "SELECT * FROM Cocktail JOIN Favoris USING (titre) WHERE user = '$users' GROUP BY titre";
 }
 else{
   $sql = "SELECT * FROM Cocktail WHERE ingredients = '" . $conn->real_escape_string($_GET['ingredients']) ."'";

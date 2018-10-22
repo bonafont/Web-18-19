@@ -1,10 +1,12 @@
 <?php
 
 function connect_link(){
-  if(isset($_SESSION['user']))
-    echo '<a href="index.php?deconnection">Se deconnecter</a>';
-  else
+  if(isset($_SESSION['user'])){
+      echo '<a href="index.php?deconnection">Se deconnecter</a>';
+  }
+  else{
     echo '<a href="index.php?connection">Se connecter</a>';
+  }
 }
 
 /*
@@ -13,7 +15,7 @@ function connect_link(){
 if(isset($_GET['register'])){
   $successful_registration =0;
   if(isset($_POST['register_submit'])){
-    $error_register_form = 0;
+    $error_register_foconnect_linkrm = 0;
     if(empty($_POST['username'])){
       $error_register_form = 1;
     }

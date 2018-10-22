@@ -97,7 +97,7 @@ if($conn->query("CREATE DATABASE Cocktail") === TRUE){
     }
     $sql = "CREATE TABLE Favoris (
                   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                  name_cocktail TEXT NOT NULL,
+                  titre TEXT NOT NULL,
                   user TEXT NOT NULL
           )";
     if($conn->query($sql) !== TRUE){
