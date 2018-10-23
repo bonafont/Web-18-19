@@ -2,7 +2,13 @@
 
 function connect_link(){
   if(isset($_SESSION['user'])){
-      echo '<a href="index.php?deconnection">Se deconnecter</a>';
+    ?>
+      <span>Mon compte</span>
+      <ul>
+        <li><a href="index.php?favoris_nav">Mes Favoris</a></li>
+        <li><a href="index.php?deconnection">Se deconnecter</a></li>
+      </ul>
+      <?php
   }
   else{
     echo '<a href="index.php?connection">Se connecter</a>';

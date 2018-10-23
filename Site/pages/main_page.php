@@ -1,17 +1,21 @@
-<div class="vagin">
-<div class="penis">
 <?php
 if(empty($_GET['ingredients'])&& !isset($_GET['favoris_nav'])){
   $sql = "SELECT * FROM Cocktail GROUP BY titre";
 }
 else if(isset($_GET['favoris_nav'])){
-  ?><h1>MES FAVORIS</h1><?php
+  ?>
+  <h1 style="text-align:center;">MES FAVORIS</h1>
+  <?php
   $users = $conn->real_escape_string($_SESSION['user']);
   $sql = "SELECT * FROM Cocktail JOIN Favoris USING (titre) WHERE user = '$users' GROUP BY titre";
 }
 else{
   $sql = "SELECT * FROM Cocktail WHERE ingredients = '" . $conn->real_escape_string($_GET['ingredients']) ."'";
 }
+?>
+<div class="vagin">
+<div class="penis">
+  <?php
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
@@ -47,7 +51,10 @@ if ($result->num_rows > 0) {
       ?> href=" <?php
       if(isset($_GET['ingredients'])){
         echo "?ingredients=". $_GET['ingredients']."&favoris=".$row['titre'];
-      }else{
+      }else if(isset($_GET['favoris_nav'])){
+        echo "?favoris_nav&favoris=".$row['titre'];
+      }
+      else{
         echo "?favoris=".$row['titre'];
       }?>"<?php
     }
@@ -60,7 +67,11 @@ if ($result->num_rows > 0) {
   </div>
 <?php
       }
-    } else {
+    }
+    else if(isset($_GET['favoris_nav'])){
+      ?><h1>Vous n'avez pas de favoris !</h1><?php
+    }
+    else {
       echo "Aucun Cocktail ne contient de " . $_GET['ingredients'];
       }
 ?>

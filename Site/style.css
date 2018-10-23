@@ -10,14 +10,30 @@ body{
   display: flex;
   flex-flow: column;
 }
+h1 {
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
 .main_body{
   flex-grow: 1;
   display: flex;
+  flex-flow: column;
+  background: linear-gradient(124deg, #ff240066, #e81d1d6b, #e8b71d7a, #e3e81d85, #1de84073, #1ddde87a, #2b1de86e, #dd00f36b, #dd00f37a);
+  background-size: 1800% 1800%;
+  animation: rainbow 18s ease infinite;}
+
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }
 footer{
   background-color: black;
   color: white;
-  margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   z-index: 1;
@@ -78,6 +94,7 @@ nav ul {
   width: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(114,114,114,1) 100%);
   border-radius: 0px 0px 10px 10px;
+  margin-bottom: 0px;
 }
 .nav li {
   position: relative;
@@ -150,6 +167,13 @@ opacity: 0;
 .connect_button{
   float: right !important;
 }
+.connect_button span{
+  margin-right :25px;
+}
+.connect_button ul{
+  width: 100%;
+  overflow: hidden;
+}
 /*
 END
 NAVIGATION BAR
@@ -215,6 +239,7 @@ NAVIGATION BAR
   justify-content: center;
   text-align: justify;
   width: 100%;
+  margin-bottom: 10px;
 }
 .sexe{
   animation: 1s cubic-bezier(0.51, 0.04, 0.11, 0.99) 0s 1 slideInFromLeft;
