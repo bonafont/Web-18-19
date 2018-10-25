@@ -3,6 +3,7 @@ if(!isset($_POST['install_submit'])){
 ?>
   <html>
     <head>
+      <meta charset="utf8"/>
       <title>Initialisation de la base de donnée COCKTAIL</title>
     </head>
   <body>
